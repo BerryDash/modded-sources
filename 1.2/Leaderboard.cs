@@ -16,7 +16,7 @@ public class Leaderboard : MonoBehaviour
 
     private void LeaderboardsButton()
     {
-        Application.OpenURL("https://berrydash.lncvrt.xyz/leaderboard.php");
+        Application.OpenURL("https://berrydash.lncvrt.xyz/leaderboards");
     }
 
     private void BackButton()
