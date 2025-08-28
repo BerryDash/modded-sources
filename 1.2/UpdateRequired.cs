@@ -10,7 +10,6 @@ public class UpdateRequired : MonoBehaviour
 
     private void TaskOnClick()
     {
-        string text = "/windows";
-        Application.OpenURL("https://berrydash.lncvrt.xyz/download" + text);
+        Application.OpenURL("https://berrydash.lncvrt.xyz/download");
     }
 }
