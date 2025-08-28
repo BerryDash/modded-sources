@@ -237,9 +237,10 @@ public class Account : MonoBehaviour
         wWWForm.AddField("username", registerPanelUsernameForm.text);
         wWWForm.AddField("email", registerPanelEmailForm.text);
         wWWForm.AddField("password", registerPanelPasswordForm.text);
-        using UnityWebRequest request = UnityWebRequest.Post("https://berrydash.xytriza.com/database/registerAccount.php", wWWForm);
-        request.SetRequestHeader("User-Agent", "BerryDashClient");
-        request.SetRequestHeader("ClientVersion", PlayerPrefs.GetFloat("clientVersion").ToString());
+        using UnityWebRequest request = UnityWebRequest.Post("https://berrydash.lncvrt.xyz/database/registerAccount.php", wWWForm);
+        request.SetRequestHeader("Requester", "BerryDashClient");
+        request.SetRequestHeader("ClientVersion", "1.3-beta2");
+        request.SetRequestHeader("ClientPlatform", Application.platform.ToString());
         yield return request.SendWebRequest();
         if (request.result != UnityWebRequest.Result.Success)
         {
@@ -290,9 +291,10 @@ public class Account : MonoBehaviour
         wWWForm.AddField("username", loginPanelUsernameForm.text);
         wWWForm.AddField("password", loginPanelPasswordForm.text);
         wWWForm.AddField("currentHighScore", PlayerPrefs.GetInt("HighScore", 0).ToString());
-        using UnityWebRequest request = UnityWebRequest.Post("https://berrydash.xytriza.com/database/loginAccount.php", wWWForm);
-        request.SetRequestHeader("User-Agent", "BerryDashClient");
-        request.SetRequestHeader("ClientVersion", PlayerPrefs.GetFloat("clientVersion").ToString());
+        using UnityWebRequest request = UnityWebRequest.Post("https://berrydash.lncvrt.xyz/database/loginAccount.php", wWWForm);
+        request.SetRequestHeader("Requester", "BerryDashClient");
+        request.SetRequestHeader("ClientVersion", "1.3-beta2");
+        request.SetRequestHeader("ClientPlatform", Application.platform.ToString());
         yield return request.SendWebRequest();
         if (request.result != UnityWebRequest.Result.Success)
         {
@@ -341,9 +343,10 @@ public class Account : MonoBehaviour
         wWWForm.AddField("username", changeUsernameCurrentForm.text);
         wWWForm.AddField("currentPassword", changeUsernamePasswordForm.text);
         wWWForm.AddField("newUsername", changeUsernameNewForm.text);
-        using UnityWebRequest request = UnityWebRequest.Post("https://berrydash.xytriza.com/database/changeAccountUsername.php", wWWForm);
-        request.SetRequestHeader("User-Agent", "BerryDashClient");
-        request.SetRequestHeader("ClientVersion", PlayerPrefs.GetFloat("clientVersion").ToString());
+        using UnityWebRequest request = UnityWebRequest.Post("https://berrydash.lncvrt.xyz/database/changeAccountUsername.php", wWWForm);
+        request.SetRequestHeader("Requester", "BerryDashClient");
+        request.SetRequestHeader("ClientVersion", "1.3-beta2");
+        request.SetRequestHeader("ClientPlatform", Application.platform.ToString());
         yield return request.SendWebRequest();
         if (request.result != UnityWebRequest.Result.Success)
         {
@@ -395,9 +398,10 @@ public class Account : MonoBehaviour
         wWWForm.AddField("username", changePasswordCurrentUsernameForm.text);
         wWWForm.AddField("currentPassword", changePasswordCurrentForm.text);
         wWWForm.AddField("newPassword", changePasswordNewForm.text);
-        using UnityWebRequest request = UnityWebRequest.Post("https://berrydash.xytriza.com/database/changeAccountPassword.php", wWWForm);
-        request.SetRequestHeader("User-Agent", "BerryDashClient");
-        request.SetRequestHeader("ClientVersion", PlayerPrefs.GetFloat("clientVersion").ToString());
+        using UnityWebRequest request = UnityWebRequest.Post("https://berrydash.lncvrt.xyz/database/changeAccountPassword.php", wWWForm);
+        request.SetRequestHeader("Requester", "BerryDashClient");
+        request.SetRequestHeader("ClientVersion", "1.3-beta2");
+        request.SetRequestHeader("ClientPlatform", Application.platform.ToString());
         yield return request.SendWebRequest();
         if (request.result != UnityWebRequest.Result.Success)
         {
@@ -468,9 +472,10 @@ public class Account : MonoBehaviour
         wWWForm.AddField("highScore", PlayerPrefs.GetInt("HighScore", 0).ToString());
         wWWForm.AddField("icon", PlayerPrefs.GetInt("icon", 1).ToString());
         wWWForm.AddField("overlay", PlayerPrefs.GetInt("overlay", 0).ToString());
-        using UnityWebRequest request = UnityWebRequest.Post("https://berrydash.xytriza.com/database/syncAccount.php", wWWForm);
-        request.SetRequestHeader("User-Agent", "BerryDashClient");
-        request.SetRequestHeader("ClientVersion", PlayerPrefs.GetFloat("clientVersion").ToString());
+        using UnityWebRequest request = UnityWebRequest.Post("https://berrydash.lncvrt.xyz/database/syncAccount.php", wWWForm);
+        request.SetRequestHeader("Requester", "BerryDashClient");
+        request.SetRequestHeader("ClientVersion", "1.3-beta2");
+        request.SetRequestHeader("ClientPlatform", Application.platform.ToString());
         yield return request.SendWebRequest();
         if (request.result != UnityWebRequest.Result.Success)
         {
