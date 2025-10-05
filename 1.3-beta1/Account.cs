@@ -238,7 +238,7 @@ public class Account : MonoBehaviour
         }
         try
         {
-            HttpResponseMessage obj = await client.PostAsync("https://berrydash.lncvrt.xyz/api/registerAccount.php", new FormUrlEncodedContent(new KeyValuePair<string, string>[3]
+            HttpResponseMessage obj = await client.PostAsync("https://berrydash.lncvrt.xyz/database/registerAccount.php", new FormUrlEncodedContent(new KeyValuePair<string, string>[3]
             {
                 new KeyValuePair<string, string>("username", registerPanelUsernameForm.text),
                 new KeyValuePair<string, string>("email", registerPanelEmailForm.text),
@@ -293,7 +293,7 @@ public class Account : MonoBehaviour
         _ = 1;
         try
         {
-            HttpResponseMessage obj = await client.PostAsync("https://berrydash.lncvrt.xyz/api/loginAccount.php", new FormUrlEncodedContent(new KeyValuePair<string, string>[2]
+            HttpResponseMessage obj = await client.PostAsync("https://berrydash.lncvrt.xyz/database/loginAccount.php", new FormUrlEncodedContent(new KeyValuePair<string, string>[2]
             {
                 new KeyValuePair<string, string>("username", loginPanelUsernameForm.text),
                 new KeyValuePair<string, string>("password", loginPanelPasswordForm.text)
@@ -340,7 +340,7 @@ public class Account : MonoBehaviour
         _ = 1;
         try
         {
-            HttpResponseMessage obj = await client.PostAsync("https://berrydash.lncvrt.xyz/api/changeAccountUsername.php", new FormUrlEncodedContent(new KeyValuePair<string, string>[3]
+            HttpResponseMessage obj = await client.PostAsync("https://berrydash.lncvrt.xyz/database/changeAccountUsername.php", new FormUrlEncodedContent(new KeyValuePair<string, string>[3]
             {
                 new KeyValuePair<string, string>("userID", PlayerPrefs.GetInt("userID", 0).ToString()),
                 new KeyValuePair<string, string>("currentPassword", changeUsernamePasswordForm.text),
@@ -393,7 +393,7 @@ public class Account : MonoBehaviour
         _ = 1;
         try
         {
-            HttpResponseMessage obj = await client.PostAsync("https://berrydash.lncvrt.xyz/api/changeAccountPassword.php", new FormUrlEncodedContent(new KeyValuePair<string, string>[3]
+            HttpResponseMessage obj = await client.PostAsync("https://berrydash.lncvrt.xyz/database/changeAccountPassword.php", new FormUrlEncodedContent(new KeyValuePair<string, string>[3]
             {
                 new KeyValuePair<string, string>("userID", PlayerPrefs.GetInt("userID", 0).ToString()),
                 new KeyValuePair<string, string>("currentPassword", changePasswordCurrentForm.text),
@@ -458,7 +458,7 @@ public class Account : MonoBehaviour
         _ = 1;
         try
         {
-            HttpResponseMessage obj = await client.PostAsync("https://berrydash.lncvrt.xyz/api/syncAccount.php", new FormUrlEncodedContent(new KeyValuePair<string, string>[3]
+            HttpResponseMessage obj = await client.PostAsync("https://berrydash.lncvrt.xyz/database/syncAccount.php", new FormUrlEncodedContent(new KeyValuePair<string, string>[3]
             {
                 new KeyValuePair<string, string>("userID", PlayerPrefs.GetInt("userID", 0).ToString()),
                 new KeyValuePair<string, string>("gameSession", PlayerPrefs.GetString("gameSession", "")),
